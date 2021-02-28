@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5041101399365038198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5041101399365038197}
+  - component: {fileID: 5041101399365038202}
+  - component: {fileID: 2497732764506884785}
+  - component: {fileID: 8512966321879873}
+  - component: {fileID: 4994083984634254634}
+  m_Layer: 0
+  m_Name: NetworkManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5041101399365038197
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5041101399365038198}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5041101399365038202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5041101399365038198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d200068b650a0c43a2b84efc25c63ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 1
+  runInBackground: 1
+  autoStartServerBuild: 1
+  showDebugMessages: 0
+  serverTickRate: 30
+  serverBatching: 0
+  serverBatchInterval: 0
+  offlineScene: Assets/Scenes/Scene_Menu.unity
+  onlineScene: 
+  transport: {fileID: 8512966321879873}
+  networkAddress: localhost
+  maxConnections: 100
+  disconnectInactiveConnections: 0
+  disconnectInactiveTimeout: 60
+  authenticator: {fileID: 0}
+  playerPrefab: {fileID: 8326083719249644835, guid: ff261ee96b6b85345a0c2a7d1f99cacf, type: 3}
+  autoCreatePlayer: 1
+  playerSpawnMethod: 1
+  spawnPrefabs:
+  - {fileID: 4361517225886019418, guid: 90d8deda14ed2624586cf1e7e7256ae4, type: 3}
+  - {fileID: 4944036877345652960, guid: dcd2f54eb98826142ac48228831af7b3, type: 3}
+  - {fileID: 8982967038183007448, guid: 1f3ac939dafc94c4c8be5de9fafacd46, type: 3}
+  - {fileID: 4009707365773487493, guid: c4ed4925465df374a9168e68a2590026, type: 3}
+  - {fileID: 6026130984884851299, guid: 94f4e543aee63184dbe2d9fea653bebe, type: 3}
+  - {fileID: 4944036877345652960, guid: 864c03fe7046d7c438c6730ff587788f, type: 3}
+  - {fileID: 3321049625305668847, guid: dd09db4b16867604785045e043373336, type: 3}
+  - {fileID: 4944036877345652960, guid: 6e7a7ede21866884da4b5a4bd45cd358, type: 3}
+  unitBasePrefab: {fileID: 4944036877345652960, guid: dcd2f54eb98826142ac48228831af7b3, type: 3}
+  gameOverHandlerPrefab: {fileID: 379733458030142501, guid: c4ed4925465df374a9168e68a2590026, type: 3}
+--- !u!114 &2497732764506884785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5041101399365038198}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0fecffa3f624585964b0d0eb21b18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Port: 7777
+  NoDelay: 1
+  Interval: 10
+  FastResend: 2
+  CongestionWindow: 0
+  SendWindowSize: 4096
+  ReceiveWindowSize: 4096
+  debugLog: 0
+  statisticsGUI: 0
+  statisticsLog: 0
+--- !u!114 &8512966321879873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5041101399365038198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea368fb6f27ec2f40a40e20977992b9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Channels: 0200000001000000
+  Timeout: 25
+  SteamAppID: 480
+  AllowSteamRelay: 1
+  SteamUserID: 0
+--- !u!114 &4994083984634254634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5041101399365038198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4bffeda13d7a748973ff9204401c07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
